@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+body {
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body button:hover {
+    cursor: pointer;
+    color: #000000;
+}
+
+.hero {
+    margin-bottom: 6rem;
+}
+
+/* .hero{
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #0000002d, #0000002d), url("images/Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+} */
+
+
+/* navbar */
+
+.navBar{
+    display: flex;
+    padding: 10px 20px;
+    padding-right: 30px;
+    font-size: 18px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navBar li{
+    list-style: none;
+}
+
+.navBar li a{
+    text-decoration: none;
+    color: #F0F0F0;
+
+}
+
+.navLinks{
+    margin-left: 2rem;
+}
+
+.navLinks ul li{
+    display: inline-block;
+    margin-right: 5rem;
+    font-weight: 700;
+}
+.navLinks ul li a:hover {
+    background: #FE7401;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#openBtn{
+    display: none;
+}
+
+.reserves img{
+    height: 30px;
+}
+
+.mobile{
+    display: none;
+}
+
+/* section */
+
+.rooms {
+    display: grid;
+    gap: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem;
+    margin-bottom: 12rem;
+}
+
+.suites img {
+    width: 400px;
+    height: 500px;
+    animation: bounce 2s ease-in-out forwards; 
+}
+
+.suites h2 {
+    margin-bottom: 1rem;
+}
+
+.price {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px transparent solid ;
+    padding: 8px;
+    position: relative;
+    bottom: 50px;
+    width: 400px;
+}
+
+.price p {
+    font-weight: 700;
+}
+
+.price button {
+    width: 100px;
+    height: 30px;
+    background: #FE7401;
+    color: #F0F0F0;
+    border: none;
+    font-weight: 400;
+}
+
+.name {
+    position: relative;
+    bottom: 45px;
+    margin-bottom: 80px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end positions */
+      }
+      50% {
+        transform: translateY(-20px); /* Peak of the bounce */
+      }
+  }
+
+
+/* footer */
+
+footer {
+    padding: 2rem;
+    margin-top: 4rem;
+    background: #F0F0F0;
+}
+
+footer h1 {
+    text-align: center;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+    color: #FE7401;
+}
+
+.foot {
+    display: flex;
+    gap: 1rem;
+}
+
+.foot img {
+    margin-right: 30px;
+}
+
+.foot h5 {
+    font-size: 20px;
+}
+
+.Address {
+    text-wrap: nowrap;
+}
+
+.ABOUT {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ABOUT {
+    text-wrap: nowrap;
+}
+
+.wikki {
+    padding-right: 4rem;
+
+}
+
+.EMAIL {
+    padding-right: 4rem;
+}
+
+.icons {
+    display: flex;
+    flex: none;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    position: relative;
+    bottom: 25px;
+
+}
+
+
+@media screen and (max-width: 900px){
+
+    body {
+        font-size: 25px;
+    }
+
+    .navLinks,
+    .reserves{
+        display: none;
+    }
+
+    .mobileLinks .reserves{
+        display: block !important;
+        margin: 0 auto;
+    }
+
+    .mobile{
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        text-align: center;
+        background: #000;
+        z-index: 9;
+        transition: .5s ease;
+    }
+    .mobile.active{
+        right: -100%;
+    }
+
+    #openBtn{
+        display: block;
+        gap: 5rem;
+        font-size: 30px;
+        color: #000;
+        font-weight: 700;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        user-select: none;
+    }
+    #openBtn:hover {
+        color: #FE7401;
+    }
+
+    .mobileLinks{
+        padding-top: 60px;
+    }
+
+    .mobileLinks li{
+        line-height: 3;
+    }
+
+    .mobileLinks li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .mobileLinks li a:hover{
+        background: #FE7401;
+        color: #000;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    #closeBtn{
+        color: white;
+        font-size: 50px;
+        display: block;
+        font-weight: 700;
+        position: absolute;
+        right: 20px;
+        top: -35px;
+        cursor: pointer;
+        user-select: none;
+
+    }
+
+    #closeBtn:hover {
+        color: #FE7401;
+    }
+
+    .suites img {
+        width: 750px;
+    }
+
+    .price {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        bottom: 80px;
+        width: 700px;
+        font-size: 30px;
+    }
+
+    .price button  {
+        width: 200px;
+        height: 50px;
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+    .rooms {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2rem;
+        margin-bottom: 12rem;
+    }
+
+    .ABOUT {
+        display: block;
+    }
+
+    .ABOUT p {
+        display: block;
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width:778px) {
+    .rooms {
+        display: block;
+        margin-bottom: 8rem;
+        
+    }
+
+    .foot {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .foot h5 {
+        display: block;
+        padding-top: 10px;
+    }
+
+}
+
+@media screen and (max-width:667px) {
+    .rooms {
+        display: block;
+        margin-bottom: 8rem;
+        
+    }
+
+    .suites img {
+        width: 400px;
+    }
+
+    .foot {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .foot h5 {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 20px;
+       
+    }
+
+    .suites img {
+        width: 500px;
+    }
+
+
+    .price {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        bottom: 80px;
+        width: 500px;
+        font-size: 15px;
+    }
+
+    .price p {
+        font-size: 20px;
+    }
+
+    .price button  {
+        width: 150px;
+        height: 50px;
+        font-weight: 500;
+        font-size: 20px;
+        padding-right:  10px;
+    }
+
+    .name {
+        width: 500px;
+    }
+
+    
+}
+
+
